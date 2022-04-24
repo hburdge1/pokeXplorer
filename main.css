@@ -1,0 +1,190 @@
+html,
+body {
+  padding-left: 5%;
+  padding-right: 5%;
+  margin: auto;
+  background-color: rgb(65, 0, 0);
+  overflow: hidden;
+  font-family: Calibri, Helvetica, sans-serif;
+  background-image: url("https://wallpapercave.com/wp/DRd73IK.jpg");
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 15rem 25% auto auto;
+  width: 100%;
+  height: 100%;
+  border-style: solid;
+  border-color: rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.747);
+  gap: 0px;
+  max-width: 75%;
+  margin: auto;
+  height: 100%;
+  background-color: rgb(99, 99, 99, 0.7);
+}
+
+.container > div {
+  overflow: auto;
+}
+
+body > div,
+.container > div,
+#myMons {
+  border-style: solid;
+  border-color: rgb(0, 0, 0);
+  border-width: 1px;
+  text-align: center;
+}
+
+.row1 {
+  grid-column: span 3;
+  display: grid;
+  grid-template-columns: auto 5% auto 5% auto;
+}
+
+#my-mons {
+  grid-column: span 3;
+  height: 50px;
+}
+
+img {
+  max-height: 50%;
+  max-width: 50%;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+  height: 30px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: rgb(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  height: 45px;
+  background-color: #e0a500;
+}
+
+.nav-top {
+  text-align: center;
+  background-color: rgb(109, 109, 109);
+  padding-bottom: 5px;
+  padding-right: 5px;
+}
+#footer {
+  grid-column: auto / span 3;
+  background-color: rgb(48, 48, 48);
+  text-align: right;
+  color: white;
+  padding-top: 5px;
+  padding-right: 5px;
+}
+.title {
+  font-size: 30px;
+  color: white;
+}
+
+#mon {
+  margin-left: 32%;
+}
+
+.main-menu:hover,
+nav.main-menu.expanded {
+  width: 150px;
+  overflow: auto;
+}
+.main-menu {
+  /*some amount of this is needec; deleting it makes the page all one big bar*/
+  background: linear-gradient(rgb(0, 0, 0, 0), rgb(211, 211, 211));
+  border-right: 10px solid #e0a500;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  width: 0px;
+  overflow: hidden;
+  -webkit-transition: width 0.05s linear;
+  transition: width 0.05s linear;
+  -webkit-transform: translateZ(0) scale(1, 1);
+  z-index: 0;
+}
+
+.no-touch .scrollable.hover {
+  overflow-y: hidden;
+}
+.no-touch .scrollable.hover:hover {
+  overflow-y: auto;
+}
+/*this keeps bullet points off on the sidebar, I like this*/
+nav ul,
+nav li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+@font-face {
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Titillium WebLight"), local("TitilliumWeb-Light"),
+    url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/anMUvcNT0H1YN4FII8wpr24bNCNEoFTpS2BTjF6FB5E.woff)
+      format("woff");
+}
+/* #mon-list {
+  color: white;
+}
+
+#mon-list:hover {
+  color: black;
+} */
+
+.rough {
+  color: firebrick;
+}
+.fine {
+  color: goldenrod;
+}
+.good {
+  color: green;
+}
+
+.right-menu:hover,
+nav.right-menu.expanded {
+  width: 150px;
+  /* padding-left: auto;
+  padding-right: auto; */
+  /* margin: auto; */
+  /* align-content: space-around; */
+  text-align: center;
+}
+.right-menu {
+  /*some amount of this is needec; deleting it makes the page all one big bar*/
+  background: #fbfbfb;
+  align-content: space-around;
+  text-align: justify;
+  border-right: 10px solid #e0a500;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  right: 0;
+  width: 0px;
+  overflow: hidden;
+  -webkit-transition: width 0.05s linear;
+  transition: width 0.05s linear;
+  -webkit-transform: translateZ(0) scale(1, 1);
+  z-index: 0;
+  align-content: center;
+  text-align: center;
+}
+.typeimg img {
+  margin-top: 5px;
+  width: 15px;
+  height: 15px;
+}
