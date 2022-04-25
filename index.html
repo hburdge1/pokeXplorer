@@ -10,7 +10,7 @@
 
     
     
-    <link rel="stylesheet" type="text/css" href="main.css"/>
+    <link rel="stylesheet" type="text/css" href="./sass/style.css"/>
 
       
     <title>Pokemon Viewer</title>
@@ -83,66 +83,63 @@ Refine By:
 </div>
   </nav>
 
-         <div class="area">
-  <nav class="right-menu">
-    <span>Team Builder</span>
-    <div id = 'my-mons'>
+    <div class="area">
+      <nav class="right-menu">
+        <span>Team Builder</span>
+        <div id='my-mons'>
+        </div>
+      </nav>
     </div>
-  </nav>
-</div>
   </nav>
 
 <!--main content -->
       <div class='container'>
         <div class='row1'>
+          <div class='evol-arrow'>arrow1</div>
+          <div class='evol-arrow2'>arrow2</div>
           <div class="devolved"></div>
-          <div class='evol-arrow'></div>
           <div class="featured-mon" id="main2">
             <img
               id="main-img"
      src="https://static.fandomspot.com/images/02/5234/00-featured-heaviest-pokemon-snorlax-sleeping-in-anime.jpg"
-            /><br>
-            <span id="mon-id">Choose a pokemon to see its details<span>
-              <br>
+            /><br />
+            <span id="mon-id"></span>
           </div>
-          <div class='evol-arrow2'></div>
           <div class='evolved'></div>
         </div>
 
       <div class="dex-regions">
-        <span>Region and Dex Number</span>
-
-        <ul id="dex-regions">
-            
+        <b>Region and Dex Number</b>
+        <ul id="dex-regions">  
         </ul>
       </div>
 
-      <div class='statbox'><h4>Base stats</h4> 
+      <div class='statbox'><b>Base stats</b> 
         <ul id="monstats"></ul>
       </div>
 
       <div class="abilities">
-        <h4>Abilities</h4>
+        <b>Abilities</b>
         <span id="abilities">
         </span>
       </div>
 
       <div class="weak">
-        <span>This pokemon's same-type-attack moves are not very effective on following types:</span>
+        This pokemon's same-type-attack moves are not very effective on following types:
         <ul id="weak-type-to"></ul>
-        <span>This pokemon is weak against the following move types</span>
+        This pokemon is weak against the following move types
         <ul id="weak-type-from"></ul>
       </div>
 
       <div class="type">
-        <span>Type(s)</span>
+        Type(s)
         <ul id="pkmn-type"></ul>
       </div>
 
       <div class="strong">
-        <span>This pokemon's same-type-attack moves are super effective on following types:</span>
+        This pokemon's same-type-attack moves are super effective on following types:
         <ul id="strong-type-to"></ul>
-        <span>This pokemon resists moves of the following types:</span>
+        This pokemon resists moves of the following types:
         <ul id="strong-type-from"></ul>
       </div>
 

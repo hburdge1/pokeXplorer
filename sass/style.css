@@ -1,0 +1,182 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #410000;
+  font-family: Calibri, Helvetica, sans-serif;
+}
+
+body {
+  overflow: hidden;
+  /*this keeps bullet points off on the sidebar, I like this*/
+}
+body .main-menu:hover,
+body nav.main-menu.expanded {
+  width: 150px;
+  overflow: auto;
+}
+body .main-menu {
+  /*some amount of this is needec; deleting it makes the page all one big bar*/
+  background: white;
+  border-right: 10px solid #e0a500;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: -1px;
+  width: 0px;
+  overflow: hidden;
+  transition: width 0.05s linear;
+  z-index: 0;
+}
+body .main-menu .pokeball {
+  height: 10px;
+}
+body .no-touch .scrollable.hover {
+  overflow-y: hidden;
+}
+body .no-touch .scrollable.hover:hover {
+  overflow-y: auto;
+}
+body nav ul,
+body nav li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+body .right-menu:hover,
+body nav.right-menu.expanded {
+  height: 100%;
+  width: 150px;
+  text-align: center;
+}
+body .right-menu {
+  /*some amount of this is needec; deleting it makes the page all one big bar*/
+  background: #fbfbfb;
+  align-content: space-around;
+  text-align: justify;
+  border-left: 10px solid #e0a500;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 0px;
+  height: 100%;
+  overflow: hidden;
+  transition: width 0.05s linear;
+  z-index: 0;
+  align-content: center;
+  text-align: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 35% 25% 40%;
+  width: 100vw;
+  height: 100vh;
+  border-color: black;
+  background-color: rgba(255, 255, 255, 0.747);
+  margin: auto;
+  height: 88.7%;
+  background-color: rgba(99, 99, 99, 0.7);
+}
+.container div {
+  overflow: auto;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  text-align: center;
+}
+.container .row1 {
+  grid-column: span 3;
+  display: grid;
+  grid-template-columns: 34% 33% 33%;
+  border: black solid;
+}
+.container .row1 div {
+  border: 0;
+}
+.container .row1 .evol-arrow {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 18%;
+  left: 21%;
+  background: rgba(255, 255, 255, 0.164);
+  z-index: 10;
+}
+.container .row1 .evol-arrow2 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 18%;
+  right: 20%;
+  background: rgba(255, 255, 255, 0.164);
+  z-index: 10;
+}
+.container .row1 img {
+  max-width: auto;
+  height: 100%;
+  float: left;
+  cursor: pointer;
+}
+.container .row1 #mon-id {
+  text-align: justify;
+  text-justify: inter-word;
+}
+.container .strong,
+.container .weak,
+.container .type {
+  overflow-y: auto;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  text-align: center;
+  padding: 2rem;
+}
+.container .strong .typeimg,
+.container .weak .typeimg,
+.container .type .typeimg {
+  max-height: 10%;
+  max-width: 10%;
+  cursor: pointer;
+}
+
+.nav-top {
+  text-align: center;
+  width: 100%;
+  background-color: #6d6d6d;
+  padding-bottom: 5px;
+  padding-right: 5px;
+}
+.nav-top .title {
+  font-size: 30px;
+  color: white;
+}
+
+#footer {
+  grid-column: span 3;
+  background-color: #303030;
+  text-align: right;
+  color: white;
+  padding-top: 5px;
+  padding-right: 2.2%;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+  height: 30px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  height: 45px;
+  background-color: #e0a500;
+}
+/*# sourceMappingURL=style.css.map */
