@@ -85,7 +85,7 @@ body {
 .container {
   display: grid;
   grid-template-columns: auto auto auto;
-  grid-template-rows: 35% 25% 40%;
+  grid-template-rows: 35% 25% 33.8% 5%;
   width: 100vw;
   height: 100vh;
   border-color: rgb(0, 0, 0);
@@ -173,6 +173,7 @@ body {
   color: white;
   padding-top: 5px;
   padding-right: 2.2%;
+  overflow: hidden;
 }
 
 ::-webkit-scrollbar {
