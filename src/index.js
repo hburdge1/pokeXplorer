@@ -195,7 +195,7 @@ $(document).ready(function () {
       let ability = document.createElement("span");
       ability.innerHTML =
         abil.ability.name.split("-").join(" ") +
-        (abil.is_hidden ? "(hidden)" : "");
+        (abil.is_hidden ? " (hidden)" : "");
       abilities.appendChild(ability);
       $("<br>").insertBefore(ability);
       //--abilities load//

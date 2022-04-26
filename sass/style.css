@@ -135,21 +135,28 @@ body .right-menu {
   text-justify: inter-word;
 }
 .container .strong,
-.container .weak,
-.container .type {
+.container .weak {
   overflow-y: auto;
   border-style: solid;
   border-color: black;
   border-width: 1px;
   text-align: center;
-  padding: 2rem;
 }
 .container .strong .typeimg,
-.container .weak .typeimg,
-.container .type .typeimg {
+.container .weak .typeimg {
   max-height: 10%;
   max-width: 10%;
   cursor: pointer;
+}
+.container .type .typeimg {
+  max-height: 20%;
+  max-width: 20%;
+  cursor: pointer;
+}
+.container h3 {
+  background: #eed026;
+  border-top: white solid 1px;
+  margin-top: -1px;
 }
 
 .nav-top {

@@ -138,19 +138,29 @@ body {
     }
   }
   .strong,
-  .weak,
-  .type {
+  .weak {
     overflow-y: auto;
     border-style: solid;
     border-color: rgb(0, 0, 0);
     border-width: 1px;
     text-align: center;
-    padding: 2rem;
     .typeimg {
       max-height: 10%;
       max-width: 10%;
       cursor: pointer;
     }
+  }
+  .type {
+    .typeimg {
+      max-height: 20%;
+      max-width: 20%;
+      cursor: pointer;
+    }
+  }
+  h3 {
+    background: rgb(238, 208, 38);
+    border-top: rgb(255, 255, 255) solid 1px;
+    margin-top: -1px;
   }
 }
 
