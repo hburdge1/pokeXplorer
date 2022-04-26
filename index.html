@@ -1,131 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width,  shrink-to-fit=yes"
+    <meta name="viewport" content="width=device-width,  shrink-to-fit=yes" />
+    <link rel="stylesheet" type="text/css" href="./sass/style.css" />
+    <title>PokeXplorer</title>
+    <link
+      rel="icon"
+      href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/512px-Pok%C3%A9_Ball_icon.svg.png"
     />
-
-    
-    
-    <link rel="stylesheet" type="text/css" href="./sass/style.css"/>
-
-      
-    <title>Pokemon Viewer</title>
   </head>
   <body>
-          <nav class='nav-top'>
-        <span class='title'><b>PokeXplorer</b></span>
-        <form class="d-flex ms-auto order-5 align-center" id='monLookup'>
-   
-    <!--top navbar-->
+    <nav class="nav-top">
+      <span class="title"><b>PokeXplorer</b></span>
+      <form class="d-flex ms-auto order-5 align-center" id="monLookup">
+        <!--top navbar-->
+        <!--searchbar-->
 
-              <!--searchbar-->
-Refine By: 
-         
-<!--dropdown for type-->
+        Refine By:
+
+        <!--dropdown for type-->
         <select id="typeChoice">
-          <option id = 'type-button'>type</option>
-          <option id = "normal" value = "normal">normal</option>
-          <option id = "fire" value = "fire" >fire</option>
-          <option id = "water" value = "water" >water</option>
-          <option id = "grass" value = "grass">grass</option>
-          <option id = "electric" value = "electric">electric</option>
-          <option id = "ice" value = "ice">ice</option>
-          <option id = "fighting" value = "fighting" >fighting</option>
-          <option id = "poison" value = "poison" >poison</option>
-          <option id = "ground" value = "ground">ground</option>
-          <option id = "flying" value = "flying">flying</option>
-          <option id = "psychic" value = "psychic">psychic</option>
-          <option id = "bug" value = "bug" >bug</option>
-          <option id = "rock" value = "rock" >rock</option>
-          <option id = "ghost" value = "ghost">ghost</option>
-          <option id = "dark" value = "dark">dark</option>
-          <option id = "dragon" value = "dragon" >dragon</option>
-          <option id = "steel" value = "steel">steel</option>
-          <option id = "fairy" value = "fairy">fairy</option>
+          <option id="type-button">Type</option>
+          <option id="normal" value="normal">Normal</option>
+          <option id="fire" value="fire">Fire</option>
+          <option id="water" value="water">Water</option>
+          <option id="grass" value="grass">Grass</option>
+          <option id="electric" value="electric">Electric</option>
+          <option id="ice" value="ice">Ice</option>
+          <option id="fighting" value="fighting">Fighting</option>
+          <option id="poison" value="poison">Poison</option>
+          <option id="ground" value="ground">Ground</option>
+          <option id="flying" value="flying">Flying</option>
+          <option id="psychic" value="psychic">Psychic</option>
+          <option id="bug" value="bug">Bug</option>
+          <option id="rock" value="rock">Rock</option>
+          <option id="ghost" value="ghost">Ghost</option>
+          <option id="dark" value="dark">Dark</option>
+          <option id="dragon" value="dragon">Dragon</option>
+          <option id="steel" value="steel">Steel</option>
+          <option id="fairy" value="fairy">Fairy</option>
         </select>
-<!--dropdown for region-->
+        <!--dropdown for region-->
         <select id="regionChoice">
-          <option id = 'region'>region</option>
-          <option id = "kanto" value = "Kanto" >Kanto (Gen I)</option>
-          <option id = "johto" value = "Johto" >Johto (Gen II)</option>
-          <option id = "hoenn" value = "Hoenn" >Hoenn (Gen III)</option>
-          <option id = "sinnoh" value = "Sinnoh">Sinnoh(Gen IV)</option>
-          <option id = "unova" value = "Unova">Unova(Gen V)</option>
+          <option id="region">Region</option>
+          <option id="kanto" value="Kanto">Kanto (Gen I)</option>
+          <option id="johto" value="Johto">Johto (Gen II)</option>
+          <option id="hoenn" value="Hoenn">Hoenn (Gen III)</option>
+          <option id="sinnoh" value="Sinnoh">Sinnoh(Gen IV)</option>
+          <option id="unova" value="Unova">Unova(Gen V)</option>
         </select>
 
-                    <!--searchbar-->
-       <input id = 'mon'
-        class="form-control me-2"
-        type="search"
-        placeholder="Search"
-        aria-label="Search"
-      />
-      
-          <!-- <span class="navbar-toggler-icon"></span> -->
-          <!--searchbar-->
-    <button class="btn btn-outline-success" type="submit">Search</button>
-    
-        
-        </form>
-        
-        </nav>
+        <!--searchbar-->
+        <input
+          id="mon"
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
 
-          <!-- side navbar/mons listing-->      
-         <div class="area">
-  <nav class="main-menu">
-    <ul id = 'mon-list'>
-    </ul>
-  </nav>
-</div>
-  </nav>
+        <!-- <span class="navbar-toggler-icon"></span> -->
+        <!--searchbar-->
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </nav>
+
+    <!-- side navbar/mons listing-->
+    <div class="area">
+      <nav class="main-menu">
+        <ul id="mon-list"></ul>
+      </nav>
+    </div>
 
     <div class="area">
       <nav class="right-menu">
         <span>Team Builder</span>
-        <div id='my-mons'>
-        </div>
+        <div id="my-mons"></div>
       </nav>
     </div>
-  </nav>
 
-<!--main content -->
-      <div class='container'>
-        <div class='row1'>
-          <div class='evol-arrow'>arrow1</div>
-          <div class='evol-arrow2'>arrow2</div>
-          <div class="devolved"></div>
-          <div class="featured-mon" id="main2">
-            <img
-              id="main-img"
-     src="https://static.fandomspot.com/images/02/5234/00-featured-heaviest-pokemon-snorlax-sleeping-in-anime.jpg"
-            /><br />
-            <span id="mon-id"></span>
-          </div>
-          <div class='evolved'></div>
+    <!--main content -->
+
+    <div class="container">
+      <div class="row1">
+        <div class="evol-arrow">arrow1</div>
+        <div class="evol-arrow2">arrow2</div>
+        <div class="devolved"></div>
+        <div class="featured-mon" id="main2">
+          <img
+            id="main-img"
+            src="https://static.fandomspot.com/images/02/5234/00-featured-heaviest-pokemon-snorlax-sleeping-in-anime.jpg"
+          />
+          <br />
+          <span id="mon-id"></span>
         </div>
+        <div class="evolved"></div>
+      </div>
 
       <div class="dex-regions">
         <b>Region and Dex Number</b>
-        <ul id="dex-regions">  
-        </ul>
+        <ul id="dex-regions"></ul>
       </div>
 
-      <div class='statbox'><b>Base stats</b> 
+      <div class="statbox">
+        <b>Base stats</b>
         <ul id="monstats"></ul>
       </div>
 
       <div class="abilities">
         <b>Abilities</b>
-        <span id="abilities">
-        </span>
+        <span id="abilities"> </span>
       </div>
 
       <div class="weak">
-        This pokemon's same-type-attack moves are not very effective on following types:
+        This pokemon's same-type-attack moves are not very effective on
+        following types:
         <ul id="weak-type-to"></ul>
         This pokemon is weak against the following move types
         <ul id="weak-type-from"></ul>
@@ -137,26 +127,27 @@ Refine By:
       </div>
 
       <div class="strong">
-        This pokemon's same-type-attack moves are super effective on following types:
+        This pokemon's same-type-attack moves are super effective on following
+        types:
         <ul id="strong-type-to"></ul>
         This pokemon resists moves of the following types:
         <ul id="strong-type-from"></ul>
       </div>
-
     </div>
-     <div id="footer">Dylan Dupasquier - Hannah Burdge - Flatiron School 2021/2022</div>
-    <script language="javascript" defer src = "./src/index.js"></script>
+    <div id="footer">
+      Dylan Dupasquier - Hannah Burdge - Flatiron School 2021/2022
+    </div>
+    <script language="javascript" defer src="./src/index.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
     <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
-    <script
+    <!-- <script
       src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
-    ></script> 
-      </body>
-  </html>
-    
+    ></script> -->
+  </body>
+</html>

@@ -6,6 +6,7 @@ body {
   width: 100vw;
   background-color: #410000;
   font-family: Calibri, Helvetica, sans-serif;
+  background-image: url("https://wallpapercave.com/wp/DRd73IK.jpg");
 }
 
 body {
@@ -16,6 +17,9 @@ body .main-menu:hover,
 body nav.main-menu.expanded {
   width: 150px;
   overflow: auto;
+}
+body select {
+  cursor: pointer;
 }
 body .main-menu {
   /*some amount of this is needec; deleting it makes the page all one big bar*/
@@ -33,7 +37,7 @@ body .main-menu {
 body .main-menu .pokeball {
   height: 10px;
 }
-body .main-menu li {
+body .main-menu span {
   cursor: pointer;
 }
 body .no-touch .scrollable.hover {
