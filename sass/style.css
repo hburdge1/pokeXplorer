@@ -81,14 +81,12 @@ body .right-menu {
 .container {
   display: grid;
   grid-template-columns: auto auto auto;
-  grid-template-rows: 35% 25% 35% 5%;
+  grid-template-rows: 35% 25% 35%;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   border-color: black;
-  background-color: rgba(255, 255, 255, 0.747);
+  background-color: rgba(226, 226, 226, 0.747);
   margin: auto;
-  height: 88.7%;
-  background-color: rgba(99, 99, 99, 0.7);
 }
 .container div {
   overflow: auto;
@@ -182,13 +180,16 @@ body .right-menu {
 }
 
 #footer {
-  grid-column: span 3;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   background-color: #303030;
   text-align: right;
   color: white;
-  padding-top: 5px;
-  padding-right: 2.2%;
   overflow: hidden;
+  position: fixed;
+  bottom: 0;
 }
 
 ::-webkit-scrollbar {
