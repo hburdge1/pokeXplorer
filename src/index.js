@@ -152,7 +152,7 @@ $(document).ready(function () {
   //--render fetched data from pokemon url//
   function renderMon(part) {
     monImage = document.getElementById("main-img");
-    monImage.src = "src/pokemon/" + part.id + ".png";
+    monImage.src = "src/pokemon/" + part.id + ".gif";
     let myMonTeam = document.getElementById("my-mons");
 
     if (monImage.hasListener == true) {
@@ -169,7 +169,7 @@ $(document).ready(function () {
       monImage.hasListener = true;
 
       monTeamName.innerHTML = `<br>${part.name}<hr>`;
-      teamImg.src = "src/pokemon/" + part.id + ".png";
+      teamImg.src = "src/pokemon/" + part.id + ".gif";
       teamDiv.append(teamImg);
       teamDiv.append(monTeamName);
       teamDiv.append(typesClone);
