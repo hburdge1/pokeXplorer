@@ -151,6 +151,10 @@ body {
     }
   }
   .type {
+    div {
+      margin-top: 5%;
+      border: none;
+    }
     .typeimg {
       max-height: 20%;
       max-width: 20%;
@@ -161,6 +165,12 @@ body {
     background: rgb(238, 208, 38);
     border-top: rgb(255, 255, 255) solid 1px;
     margin-top: -1px;
+    margin-bottom: 0;
+  }
+  #abilities,
+  #dex-regions {
+    margin-top: 0;
+    border: none;
   }
 }
 

@@ -148,6 +148,10 @@ body .right-menu {
   max-width: 10%;
   cursor: pointer;
 }
+.container .type div {
+  margin-top: 5%;
+  border: none;
+}
 .container .type .typeimg {
   max-height: 20%;
   max-width: 20%;
@@ -157,6 +161,12 @@ body .right-menu {
   background: #eed026;
   border-top: white solid 1px;
   margin-top: -1px;
+  margin-bottom: 0;
+}
+.container #abilities,
+.container #dex-regions {
+  margin-top: 0;
+  border: none;
 }
 
 .nav-top {
