@@ -56,18 +56,6 @@ $(document).ready(function () {
       "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Pok%C3%A9mon_Water_Type_Icon.svg/120px-Pok%C3%A9mon_Water_Type_Icon.svg.png",
   };
 
-  // function duplicateChildNodes (parentId){
-  //   var parent = document.getElementById(parentId);
-  //   NodeList.prototype.forEach = Array.prototype.forEach;
-  //   var children = parent.childNodes;
-  //   children.forEach(function(item){
-  //     var cln = item.cloneNode(true);
-  //     parent.appendChild(cln);
-  //   });
-  // };
-
-  // duplicateChildNodes("container");
-
   function toTitleCase(upper) {
     return upper.charAt(0).toUpperCase() + upper.slice(1);
   }
@@ -77,7 +65,6 @@ $(document).ready(function () {
       parent.removeChild(parent.firstChild);
     }
   }
-
   //main code start//
   //initial data fetch//
   function openingFetch() {
@@ -114,7 +101,6 @@ $(document).ready(function () {
                 typesArr.forEach((montype) => {
                   //**damageValues: each type w/ double damage, half damage, etc//
                   damageValues[montype.name] = montype.damage_relations;
-
                   //**typecheck: each type with all mons and their urls//
                   typeCheck[montype.name] = montype.pokemon;
                   //typecheck end//
@@ -165,7 +151,6 @@ $(document).ready(function () {
 
   //--render fetched data from pokemon url//
   function renderMon(part) {
-    console.log(part.types[0].type.name);
     monImage = document.getElementById("main-img");
     monImage.src = "src/pokemon/" + part.id + ".png";
     let myMonTeam = document.getElementById("my-mons");
@@ -266,11 +251,6 @@ $(document).ready(function () {
         `${sum}<br>` +
         "This pokemon's BST is below average.";
     }
-
-    //still RenderMon//                     //**/ bst summation loop
-    //still RenderMon//                    //give feat mon types-two only//
-    //start to setelement-relationships//
-
     removeAllChildNodes(pkmnType);
     removeAllChildNodes(weakTypeTo);
     removeAllChildNodes(weakTypeFrom);
@@ -279,9 +259,10 @@ $(document).ready(function () {
 
     let montypes = part.types;
     montypes.forEach((bit) => {
-      monType = document.createElement("button");
-      monType.innerText = bit.type.name;
-
+      monType = document.createElement("img");
+      monType.src= typeIcons[bit.type.name];
+      monType.className= "typeimg";
+      pkmnType.appendChild(monType)
       let featTypeDamage = damageValues[bit.type.name];
       let weakTo = featTypeDamage.double_damage_from;
 
@@ -335,9 +316,6 @@ $(document).ready(function () {
 
     //render mon end//
   }
-
-  //[can be removed from renderMon if part is defined]//
-  //[all appending can be pulled out into its own function]//
 
   //loads descriptive dex text//
   function loadDexEntries(pkmn) {
