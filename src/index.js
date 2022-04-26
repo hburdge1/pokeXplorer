@@ -172,7 +172,6 @@ $(document).ready(function () {
       teamImg.src = "src/pokemon/" + part.id + ".gif";
       teamDiv.append(teamImg);
       teamDiv.append(monTeamName);
-      teamDiv.append(typesClone);
     });
     myMonTeam.append(teamDiv);
 
