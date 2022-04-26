@@ -11,7 +11,6 @@ body {
 
 body {
   overflow: hidden;
-  /*this keeps bullet points off on the sidebar, I like this*/
 }
 body .main-menu:hover,
 body nav.main-menu.expanded {
@@ -22,7 +21,6 @@ body select {
   cursor: pointer;
 }
 body .main-menu {
-  /*some amount of this is needec; deleting it makes the page all one big bar*/
   background: white;
   border-right: 10px solid #e0a500;
   position: fixed;
@@ -60,7 +58,6 @@ body nav.right-menu.expanded {
   text-align: center;
 }
 body .right-menu {
-  /*some amount of this is needec; deleting it makes the page all one big bar*/
   background: #fbfbfb;
   align-content: space-around;
   text-align: justify;
@@ -100,7 +97,6 @@ body .right-menu {
   display: grid;
   grid-template-columns: auto 50% auto;
   padding-bottom: none;
-  text-align: center;
 }
 .container .row1 div {
   border: 0;
