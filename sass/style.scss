@@ -32,6 +32,9 @@ body {
     .pokeball {
       height: 10px;
     }
+    li {
+      cursor: pointer;
+    }
   }
 
   .no-touch .scrollable.hover {
