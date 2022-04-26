@@ -182,7 +182,7 @@ $(document).ready(function () {
     removeAllChildNodes(dexRegions);
     allGames.forEach((game) => {
       const dexLi = document.createElement("span");
-      dexLi.innerHTML = game.version.name;
+      dexLi.innerHTML = toTitleCase(game.version.name);
       dexRegions.appendChild(dexLi);
       $("<br>").insertBefore(dexLi);
       //--game appearances load//
@@ -205,27 +205,27 @@ $(document).ready(function () {
       removeAllChildNodes(statList);
     }
     const HP = document.createElement("span");
-    HP.innerHTML = `HP: ${part.stats[0].base_stat}<br>`;
+    HP.innerHTML = `HP: ${part.stats[0].base_stat}<br />`;
     statList.appendChild(HP);
     const atk = document.createElement("span");
-    atk.innerHTML = `Attack: ${part.stats[1].base_stat}<br>`;
+    atk.innerHTML = `Attack: ${part.stats[1].base_stat}<br />`;
     statList.appendChild(atk);
     const def = document.createElement("span");
-    def.innerHTML = `Defense: ${part.stats[2].base_stat}<br>`;
+    def.innerHTML = `Defense: ${part.stats[2].base_stat}<br />`;
     statList.appendChild(def);
     const spatk = document.createElement("span");
-    spatk.innerHTML = `Special attack: ${part.stats[3].base_stat}<br>`;
+    spatk.innerHTML = `Special attack: ${part.stats[3].base_stat}<br />`;
     statList.appendChild(spatk);
     const spdef = document.createElement("span");
-    spdef.innerHTML = `Special Defense: ${part.stats[4].base_stat}<br>`;
+    spdef.innerHTML = `Special Defense: ${part.stats[4].base_stat}<br />`;
     statList.appendChild(spdef);
     const speed = document.createElement("span");
-    speed.innerHTML = `Speed: ${part.stats[5].base_stat}<br>`;
+    speed.innerHTML = `Speed: ${part.stats[5].base_stat}<br />`;
 
     statList.appendChild(speed);
     //still RenderMon//                     //***/ bst summation loop
     var sum = 0;
-    let bst = document.createElement("h6");
+    let bst = document.createElement("span");
     for (let i = 0; i < 6; i++) {
       sum += part.stats[i].base_stat;
     }
@@ -246,7 +246,7 @@ $(document).ready(function () {
       bst.classList.add("rough");
       bst.innerHTML =
         "Base Stat Total(BST):" +
-        `${sum}<br>` +
+        `${sum}<br />` +
         "This pokemon's BST is below average.";
     }
     removeAllChildNodes(pkmnType);
@@ -258,9 +258,9 @@ $(document).ready(function () {
     let montypes = part.types;
     montypes.forEach((bit) => {
       monType = document.createElement("img");
-      monType.src= typeIcons[bit.type.name];
-      monType.className= "typeimg";
-      pkmnType.appendChild(monType)
+      monType.src = typeIcons[bit.type.name];
+      monType.className = "typeimg";
+      pkmnType.appendChild(monType);
       let featTypeDamage = damageValues[bit.type.name];
       let weakTo = featTypeDamage.double_damage_from;
 

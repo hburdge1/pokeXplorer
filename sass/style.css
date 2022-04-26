@@ -80,7 +80,7 @@ body .right-menu {
 
 .container {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto 20% auto;
   grid-template-rows: 35% 25% 35%;
   width: 100vw;
   height: 100%;
@@ -98,8 +98,9 @@ body .right-menu {
 .container .row1 {
   grid-column: span 3;
   display: grid;
-  grid-template-columns: 34% 33% 33%;
-  border: black solid;
+  grid-template-columns: auto 50% auto;
+  padding-bottom: none;
+  text-align: center;
 }
 .container .row1 div {
   border: 0;
@@ -123,7 +124,6 @@ body .right-menu {
   z-index: 10;
 }
 .container .row1 img {
-  max-width: auto;
   height: 100%;
   float: left;
   cursor: pointer;
@@ -150,9 +150,9 @@ body .right-menu {
   margin-top: 5%;
   border: none;
 }
-.container .type .typeimg {
-  max-height: 20%;
-  max-width: 20%;
+.container .type div .typeimg {
+  max-height: 50px;
+  max-width: 50px;
   cursor: pointer;
 }
 .container h3 {
@@ -162,9 +162,15 @@ body .right-menu {
   margin-bottom: 0;
 }
 .container #abilities,
-.container #dex-regions {
+.container #dex-regions,
+.container #monstats {
   margin-top: 0;
   border: none;
+}
+.container .rough {
+  font-weight: bold;
+  font-size: 0.7rem;
+  margin: 0;
 }
 
 .nav-top {
